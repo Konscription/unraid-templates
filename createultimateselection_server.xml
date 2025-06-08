@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Create Ultimate Selection</Name>
+  <Repository>konviction/createultimateselection:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/konviction/createultimateselection</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Konscription/docker-CreateUltimateSelection</Support>
+  <Project>https://www.curseforge.com/minecraft/modpacks/create-ultimate-selection</Project>
+  <Overview>[b]Create Ultimate Selection[/b][br]This modpack brings together the best Create mods, immersing you in a world of endless possibilities where engineering, automation, and creativity know no bounds. Build impressive machines, automate complex tasks, and transform your world with innovative tools. From advanced transportation systems to intricate automated factories, this modpack offers everything you need to design and experiment in a unique and dynamic environment. Perfect for multiplayer, you can collaborate with friends to create amazing engineering projects together. Unleash your creativity and turn your world into an engineering marvel with the finest Create mods![br][br]Setup:[br][li]You must accept the EULA by setting the [b]EULA[/b] variable to [span style='color: #00E800;']true[/span] or the install will fail.[br]Optional:[br][li]You can setup a comma separated list of players who will have admin privileges in game by setting [b]OPS[/b]</Overview>
+  <Category>GameServers:</Category>
+  <ExtraSearchTerms>minecraft</ExtraSearchTerms>
+  <Icon>https://media.forgecdn.net/avatars/thumbnails/1156/169/64/64/638723864734826252.jpg</Icon>
+<Config
+      Type="Path"
+      Name="Installed Location"
+      Target="/data"
+      Default="/mnt/user/appdata/createulti/"
+      Mode="rw"
+      Description="Path to store the installed server files."
+      Display="always"
+      Required="true"
+      Mask="false">/mnt/user/appdata/createulti/</Config>
+  <Config
+      Type="Variable"
+      Name="EULA"
+      Target="EULA"
+      Default="false"
+      Description="Do you agree to the Mojang EULA available at https://account.mojang.com/documents/minecraft_eula? Server will not start without accepting. Set to 'true' to accept."
+      Display="always"
+      Required="true"
+      Mask="false">false</Config>
+  <Config
+      Type="Variable"
+      Name="Minimum Ram for JVM"
+      Target="MIN_RAM"
+      Default="4G"
+      Description="JAVA -Xms Option"
+      Display="always"
+      Required="false"
+      Mask="false">4G</Config>
+  <Config
+      Type="Variable"
+      Name="Maximum Ram for JVM"
+      Target="MAX_RAM"
+      Default="4G"
+      Description="JAVA -Xmx Option"
+      Display="always"
+      Required="false"
+      Mask="false">4G</Config>
+  <Config
+      Type="Variable"
+      Name="OPS"
+      Target="OPS"
+      Default=""
+      Description="Comma separated list of players to have op capability"
+      Display="always"
+      Required="false"
+      Mask="false"/>
+  <Config
+      Type="Variable"
+      Name="MOTD"
+      Target="MOTD"
+      Default=""
+      Description="Set the server MOTD"
+      Display="always"
+      Required="false"
+      Mask="false"/>
+  <Config
+      Type="Port"
+      Name="Port"
+      Target="25565"
+      Default="25565"
+      Mode="tcp"
+      Description="Port for the server"
+      Display="always"
+      Required="false"
+      Mask="false">25565</Config>
+</Container>
